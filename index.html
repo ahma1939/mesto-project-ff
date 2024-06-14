@@ -1,81 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
-</head>
-<body class="page">
-<div class="page__content">
-  <header class="header page__section">
-    <img src="./images/logo.svg" alt="Логотип проекта масто" class="logo header__logo">
-  </header>
-  <main class="content">
-    <section class="profile page__section">
-      <div class="profile__image" style="background-image: url('./images/avatar.jpg');"></div>
-      <div class="profile__info">
-        <h1 class="profile__title">Жак-Ив Кусто</h1>
-        <button class="profile__edit-button" type="button"></button>
-        <p class="profile__description">Исследователь океана</p>
-      </div>
-      <button class="profile__add-button" type="button"></button>
-    </section>
-    <section class="places page__section">
-      <ul class="places__list">
-      </ul>
-    </section>
-  </main>
-  <footer class="footer page__section">
-    <p class="footer__copyright">
-      © 2021 Mesto Russia
-    </p>
-  </footer>
-  <div class="popup popup_type_edit">
-    <div class="popup__content">
-      <button type="button" class="popup__close"></button>
-      <h3 class="popup__title">Редактировать профиль</h3>
-      <form class="popup__form" name="edit-profile">
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" required>
-        <input type="text" name="description" class="popup__input popup__input_type_description" placeholder="Занятие" required>
-        <button type="submit" class="button popup__button">Сохранить</button>
-      </form>
-    </div>
-  </div>
-  <div class="popup popup_type_new-card">
-    <div class="popup__content">
-      <button type="button" class="popup__close"></button>
-      <h3 class="popup__title">Новое место</h3>
-      <form class="popup__form" name="new-place">
-        <input type="text" name="place-name" class="popup__input popup__input_type_card-name" placeholder="Название" required>
-        <input type="url" name="link" class="popup__input popup__input_type_url" placeholder="Ссылка на картинку" required>
-        <button type="submit" class="button popup__button">Сохранить</button>
-      </form>
-    </div>
-  </div>
-  <div class="popup popup_type_image">
-    <div class="popup__content popup__content_content_image">
-      <button type="button" class="popup__close"></button>
-      <img src="" alt="" class="popup__image">
-      <p class="popup__caption"></p>
-    </div>
-  </div>
-</div>
-<script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script>
 
-<template id="card-template">
-  <li class="places__item card">
-    <img class="card__image" src="" alt="" />
-    <button type="button" class="card__delete-button"></button>
-    <div class="card__description">
-      <h2 class="card__title">
-      </h2>
-      <button type="button" class="card__like-button"></button>
-    </div>
-  </li>
-</template>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mesto</title>
+	<link rel="icon" type="image/svg" href="#">
+	<link rel="stylesheet" href="./pages/index.css">
+	<script src="./scripts/index.js" defer></script>
+	<script src="./scripts/cards.js" defer></script>
+</head>
+
+<body class="page">
+	<header class="header">
+		<img class="header__logo" src="images/logo.svg" alt="Лого Место">
+	</header>
+
+	<div class="main">
+		<section class="profile">
+			<button class="profile__add-button" aria-label="Добавить" type="button"></button>
+			<div class="profile__box">
+				<img class="profile__avatar" src="./images/Kusto.jpg" alt="Аватар пользователя">
+				<div class="profile__info">
+					<h1 class="profile__name">Жак-Ив Кусто</h1>
+					<button class="profile__edit-button" aria-label="Редактировать" type="button"></button>
+					<p class="profile__description">Исследователь океана</p>
+				</div>
+			</div>
+		</section>
+		<section class="elements">
+			<article class="element">
+				<img class="element__item" src="./images/Dombai.jpg" alt="Домбай">
+				<div class="element__info">
+					<h2 class="element__title">Домбай</h2>
+					<button class="element__like-button" type="button"></button>
+				</div>
+			</article>
+			<article class="element">
+				<img class="element__item" src="./images/Elbrus.jpg" alt="Эльбрус">
+				<div class="element__info">
+					<h2 class="element__title">Гора Эльбрус</h2>
+					<button class="element__like-button" type="button"></button>
+				</div>
+			</article>
+			<article class="element">
+				<img class="element__item" src="./images/Karachaevsk.jpg" alt="Карачаевск">
+				<div class="element__info">
+					<h2 class="element__title">Карачаевск</h2>
+					<button class="element__like-button" type="button"></button>
+				</div>
+			</article>
+			<article class="element">
+				<img class="element__item" src="./images/Dombai.jpg" alt="Домбай">
+				<div class="element__info">
+					<h2 class="element__title">Домбай</h2>
+					<button class="element__like-button" type="button"></button>
+				</div>
+			</article>
+			<article class="element">
+				<img class="element__item" src="./images/Elbrus.jpg" alt="Эльбрус">
+				<div class="element__info">
+					<h2 class="element__title">Гора Эльбрус</h2>
+					<button class="element__like-button" type="button"></button>
+				</div>
+			</article>
+			<article class="element">
+				<img class="element__item" src="./images/Karachaevsk.jpg" alt="Карачаевск">
+				<div class="element__info">
+					<h2 class="element__title">Карачаевск</h2>
+					<button class="element__like-button" type="button"></button>
+				</div>
+			</article>
+		</section>
+	</div>
+	<footer class="footer">
+		<p class="footer__copyright">&copy; 2023 | Ahma Abdullaev</p>
+	</footer>
+
+	<div class="popup popup_edit-profile">
+		<div class="popup__container">
+			<button class="popup__close-button" aria-label="Закрыть" type="button"></button>
+			<form novalidate class="popup__form popup__form_type_edit-profile" name="popup__form">
+				<h2 class="popup__title">Редактировать профиль</h2>
+				<input class="popup__input popup__input_type_name" id="input-name" name="input-name_edit-profile" type="text"
+					placeholder="Введите имя" minlength="1" maxlength="60" autocomplete="off" required>
+				<input class="popup__input popup__input_type_description" id="input-description" name="input-description"
+					type="text" placeholder="Введите описание" minlength="1" maxlength="60" autocomplete="off" required>
+				<button class="popup__submit-button" type="submit">Сохранить</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="popup popup_add-card">
+		<div class="popup__container">
+			<button class="popup__close-button" aria-label="Закрыть" type="button"></button>
+			<h2 class="popup__title">Новое место</h2>
+			<form novalidate class="popup__form popup__form_type_add-card" name="popup__form">
+				<input id="input-title" class="popup__input popup__input_type_title" name="input-title" type="text"
+					placeholder="Название" minlength="2" maxlength="40" autocomplete="off" required>
+				<span id="error-input-title" class="popup__error popup__error_type_title"></span>
+				<input id="input-link" class="popup__input popup__input_type_link" name="input-link" type="url"
+					placeholder="Ссылка на картинку" autocomplete="off" required>
+				<span id="error-input-link" class="popup__error popup__error_type_link"></span>
+				<button disabled class="popup__submit-button popup__submit-button_add" type="submit">Создать</button>
+			</form>
+		</div>
+	</div>
+
+	<template id="element-template">
+		<article class="element">
+			<img class="element__item">
+			<button class="element__delete-button" type="button"></button>
+			<div class="element__info">
+				<h3 class="element__title"></h3>
+				<button class="element__like-button" type="button"></button>
+			</div>
+		</article>
+	</template>
+
 </body>
+
 </html>
